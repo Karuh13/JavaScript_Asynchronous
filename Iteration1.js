@@ -25,7 +25,6 @@ const pintar = (data) => {
     for (country of data.country) {
         country.probability = (country.probability * 100).toFixed(1)
         infoRespuesta.push(country);
-        console.log(infoRespuesta);
     }
     
     respuesta$$.innerText = `El nombre ${data.name} tiene un ${infoRespuesta[0].probability} porciento de ser de ${infoRespuesta[0].country_id}, un ${infoRespuesta[1].probability} porciento de ser de ${infoRespuesta[1].country_id}, un ${infoRespuesta[2].probability} porciento de ser de ${infoRespuesta[2].country_id}, un ${infoRespuesta[3].probability} porciento de ser de ${infoRespuesta[3].country_id} y un ${infoRespuesta[4].probability} porciento de ser de ${infoRespuesta[4].country_id}.` 
